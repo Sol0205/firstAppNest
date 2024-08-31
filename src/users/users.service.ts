@@ -10,16 +10,13 @@ export class UsersService {
 
 
     getUsers() {
-        // return ["H", "E", "L", "L", "O"]
-        return this.user.findMany();
+        return this.prisma.user.findMany();
     }
 
     createUser(user: CreateUserDto) {
-        return {
-            return this.prisma.user.create({
-                data:
+        return  this.prisma.user.create({
+                data: user
             })
-        }
     }
 }
 
