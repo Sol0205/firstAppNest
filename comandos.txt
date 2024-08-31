@@ -33,7 +33,7 @@ nest g guard /hello/guards/auth
 nest g middleware users/logger
     dentro de users, crea una carpeta que se llama logger.middleware y dentro de ella crea un "auth.guard" y su spec
 nest resource payments --> REST API
-    Crea una carpeta llamada payments con todos los recursos (controller, module, service, create-payment.dto, update-payment.dto y un payment.entity)
+    Crea una carpeta llamada payments con todos los recursos (controller, module, service, create-payment.dto, update-payment.dto y un payment.entity (este ultimo indica la interaz que necesita))
 
 
 
