@@ -1,7 +1,9 @@
 import { Controller, Patch, Get, Post, Put, Delete } from '@nestjs/common';
 import { ProjectsService } from './projects.service';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller({})
+@ApiTags('Project')
 export class ProjectsController {
     constructor(private projectsService: ProjectsService) { }
 
