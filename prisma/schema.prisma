@@ -14,11 +14,29 @@ datasource db {
 }
 
 model User {
-  id        String @id @default(cuid())
-  email     String @unique
-  name      String?
-  password  String
+  id       String  @id @default(uuid())
+  email    String  @unique
+  name     String?
+  password String
 
-  createAt DateTime @default(now())
+  createAt  DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Product {
+  nameProduct  String  @unique
+  description  String
+  category     String
+  dimensions   String
+  color        String
+  price        Float
+  currency     String
+  quantity     Int
+  available    Boolean
+  featured     Boolean
+  creationDate String
+  updateDate   String
+  creationUser String
+  deleted      Boolean
+  deletionDate String
 }
