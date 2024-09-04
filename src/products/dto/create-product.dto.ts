@@ -1,4 +1,4 @@
-import { IsArray, IsBoolean, IsDate, IsISO8601, isISO8601, IsNumber, IsString, MinLength } from 'class-validator'
+import { IsArray, IsBoolean, IsIn, IsISO8601, IsNumber, IsString, MinLength } from 'class-validator'
 
 export class CreateProductDto {
     @IsString()
@@ -35,8 +35,11 @@ export class CreateProductDto {
     @IsBoolean()
     available: boolean
 
-    @IsBoolean()
-    featured: boolean
+    @IsIn(['ARS', 'USD', 'EUR', 'BTC', 'ETH',])
+    featured: string
+
+    // @IsBoolean()
+    // featured: boolean
 
     @IsISO8601()
     creationDate: string

@@ -33,7 +33,7 @@ model Product {
   currency     String
   quantity     Int
   available    Boolean
-  featured     Boolean
+  featured     String
   creationDate String
   updateDate   String
   creationUser String
