@@ -38,8 +38,8 @@ export class CreateProductDto {
     @IsIn(['ARS', 'USD', 'EUR', 'BTC', 'ETH',])
     featured: string
 
-    // @IsBoolean()
-    // featured: boolean
+    @IsISO8601()
+    creationUser: string
 
     @IsISO8601()
     creationDate: string
@@ -47,14 +47,9 @@ export class CreateProductDto {
     @IsISO8601()
     updateDate: string
 
-    @IsString()
-    @MinLength(1)
-    creationUser: string
+    @IsISO8601()
+    deletionDate: string
 
     @IsBoolean()
     deleted: boolean
-
-    @IsString()
-    @MinLength(1)
-    deletionDate: string
 }
